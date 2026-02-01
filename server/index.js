@@ -2,8 +2,6 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import authRoutes from './routes/auth.js';
-import userRoutes from './routes/user.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -23,8 +21,7 @@ app.use(express.json({ limit: '50mb' })); // Body parser with increased limit fo
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 // Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/user', userRoutes);
+// (Clerk handles authentication on the frontend)
 
 // Database Connection
 // Database Connection Strategy

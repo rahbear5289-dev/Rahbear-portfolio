@@ -8,7 +8,7 @@
         "start": "node server/index.js",
         "server": "npm run dev --prefix server",
         "client": "vite",
-        "build": "vite build",
+        "build": "npm install --prefix server && vite build",
         "lint": "eslint .",
         "preview": "vite preview"
     },
